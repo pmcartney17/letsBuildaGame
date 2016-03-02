@@ -1,11 +1,17 @@
-# letsBuildaGame
-Comp Prog 30
-link for learning: https://www.youtube.com/playlist?list=PLRIWtICgwaX0u7Rf9zkZhLoLuZVfUksDP
+# Lets Build a Game!
+Comp Prog 30 project
 
+3D game programming tutorial: https://www.youtube.com/playlist?list=PLRIWtICgwaX0u7Rf9zkZhLoLuZVfUksDP
 
+Under Development:
+- sound
+- rendering
+- inputs
+- texture loader
+- 
 
-Ian, Brett, Kadyn, Spencer
-sound
-game mechanics
-rendering
-inputs
+Game Ideas, concepts, and mechanics:
+- 
+
+Contributors: Ian, Brett, Kadyn, Spencer
+
