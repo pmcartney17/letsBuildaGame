@@ -14,6 +14,8 @@ Game Ideas, concepts, and mechanics:
 - Map screen
 - Character Selection Screen
 - Battle Animation
+- Weight Limit
+- Quests
 
 
 Contributors: Ian, Brett, Kadyn, Spencer
