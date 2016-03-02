@@ -10,7 +10,7 @@ Under Development:
 - texture loader
 
 Game Ideas, concepts, and mechanics:
-- Waling xD
+- Walking xD
 
 Contributors: Ian, Brett, Kadyn, Spencer
 
