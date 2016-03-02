@@ -8,10 +8,8 @@ Under Development:
 - rendering
 - inputs
 - texture loader
-- 
 
 Game Ideas, concepts, and mechanics:
-- 
 
 Contributors: Ian, Brett, Kadyn, Spencer
 
