@@ -11,11 +11,7 @@ Under Development:
 
 Game Ideas, concepts, and mechanics:
 - Walking xD
-- Map screen
-- Character Selection Screen
-- Battle Animation
-- Weight Limit
-- Quests
+- Character
 
 
 Contributors: Ian, Brett, Kadyn, Spencer
