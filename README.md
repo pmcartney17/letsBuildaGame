@@ -4,7 +4,7 @@ LWJGL wiki with info on making basic engine: http://wiki.lwjgl.org/index.php?tit
 
 tutorial for LWJGL 2 (thinmartix): https://www.youtube.com/playlist?list=PLRIWtICgwaX0u7Rf9zkZhLoLuZVfUksDP
 
-tutorial for newer LWJGL 3 (ElegantWhelp): https://www.youtube.com/watch?v=ZBWAXr9z0bI&list=PLILiqflMilIxta2xKk2EftiRHD4nQGW0u
+tutorial for LWJGL 3 (ElegantWhelp): https://www.youtube.com/watch?v=ZBWAXr9z0bI&list=PLILiqflMilIxta2xKk2EftiRHD4nQGW0u
 
 Link for using github and eclipse together: https://eclipse.github.io/
 
