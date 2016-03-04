@@ -1,6 +1,6 @@
 # Lets Build a Game!
 Comp Prog 30 project
-LWJGL wiki with info on making basic engine:
+LWJGL wiki with info on making basic engine: <br/>
 http://wiki.lwjgl.org/index.php?title=Main_Page
 
 tutorial for LWJGL 2 (thinmartix): <br/>
