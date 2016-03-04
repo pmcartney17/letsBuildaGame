@@ -4,6 +4,8 @@ LWJGL wiki with info on making basic engine: http://wiki.lwjgl.org/index.php?tit
 3D game programming tutorial: https://www.youtube.com/playlist?list=PLRIWtICgwaX0u7Rf9zkZhLoLuZVfUksDP
 tutorial for newer LWJGL 3: https://www.youtube.com/watch?v=ZBWAXr9z0bI&list=PLILiqflMilIxta2xKk2EftiRHD4nQGW0u 
 
+Link for using github and eclipse together: https://eclipse.github.io/
+
 Under Development:
 
 - keyboard input
