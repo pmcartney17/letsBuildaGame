@@ -8,38 +8,34 @@ import org.lwjgl.opengl.GL11;
 import org.lwjgl.opengl.PixelFormat;
 
 public class DisplayManager {
-	//variables
+	
 	private static final int WIDTH = 1280;
 	private static final int HEIGHT= 720;
 	public static final int FPS_CAP = 120;
-	
-	
-	
-	
-public static void createDisplay(){
-	ContextAttribs attribs = new ContextAttribs(3,2);
-	
-	
-try {
-	Display.setDisplayMode(new DisplayMode(WIDTH,HEIGHT));
-	Display.create(new PixelFormat(), attribs);
-	Display.setTitle("game engine lord frost");
-	
-} catch (LWJGLException e) {
-	// TODO Auto-generated catch block
-	e.printStackTrace();
-}
+	public static final String NAME = "Game Engine";
 
-GL11.glViewport(0,0,WIDTH,HEIGHT);
-
-}
-public static void updateDisplay(){
-	Display.sync(FPS_CAP);
+	public static void createDisplay(){
+		ContextAttribs attribs = new ContextAttribs(3,2).withForwardCompatible(true).withProfileCore(true);
 	
-}
+		try {
+			Display.setDisplayMode(new DisplayMode(WIDTH,HEIGHT));
+			Display.create(new PixelFormat(), attribs);
+			Display.setTitle(NAME);
+		} catch (LWJGLException e) {
+			e.printStackTrace();
+		}
 
-public static void closeDisplay(){
+		GL11.glViewport(0,0,WIDTH,HEIGHT);
+
+	}
 	
-	Display.destroy();
-}
+	public static void updateDisplay(){
+		Display.sync(FPS_CAP);
+		Display.update();
+	}
+
+	public static void closeDisplay(){
+		Display.destroy();
+	}
+	
 }
