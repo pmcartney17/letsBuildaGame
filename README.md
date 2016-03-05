@@ -1,4 +1,5 @@
 # Lets Build a Game!
+# This Line Was Added By EGit!
 Comp Prog 30 project
 LWJGL wiki with info on making basic engine: <br/>
 http://wiki.lwjgl.org/index.php?title=Main_Page
