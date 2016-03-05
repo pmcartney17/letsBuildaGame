@@ -12,7 +12,7 @@ https://www.youtube.com/watch?v=ZBWAXr9z0bI&list=PLILiqflMilIxta2xKk2EftiRHD4nQG
 Link for using github and eclipse together: <br/>
 https://eclipse.github.io/
 
-<br/> EGit for eclipse works (o_o)
+<br/> EGit for eclipse works (o_o)<br/>
 
 
 Under Development:
