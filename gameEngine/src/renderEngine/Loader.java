@@ -15,7 +15,7 @@ public class Loader {
  private ArrayList<Integer> vaos = new ArrayList<Integer>();
  private ArrayList<Integer> vbos = new ArrayList<Integer>();
  
-
+ 
 	public RawModel loadToVAO(float[] postions, int[] indices){
 		int vaoID = createVAO();
 		bindIndicesBuffer(indices);
