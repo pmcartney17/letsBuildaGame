@@ -28,13 +28,10 @@ public class MainGameLoop {
 		RawModel model = loader.loadToVAO(vertices,indices);//, indices);
 	
 		while(!Display.isCloseRequested()){
-			//game logic
-			//render
 			renderer.prepare();
-			//shader.start();
-			renderer.render(model);	
-			//renderer.prepare();
-			//shader.stop();
+			shader.start();
+			renderer.render(model);
+			shader.stop();
 			DisplayManager.updateDisplay();	
 		}
 		
