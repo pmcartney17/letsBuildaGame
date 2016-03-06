@@ -32,5 +32,3 @@ mechanics:
 
 Contributors: Ian, Brett, Kadyn, Spencer
 
-Apparently your guy's names aren't spelled properly .... gj eclipse
-
