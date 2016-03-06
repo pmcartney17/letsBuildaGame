@@ -17,16 +17,15 @@ public class MainGameLoop {
 		Renderer renderer = new Renderer();
 		StaticShader shader = new StaticShader();
 	
-		float[] vertices = { -0.5f, 0.5f, 0f, 
-							-0.5f, -0.5f, 0f, 
-							0.5f, -0.5f, 0f, 
-							//0.5f, -0.5f, 0f, 
-							//0.5f, 0.5f, 0f, 
-							//-0.5f, 0.5f, 0f
+		float[] vertices = { -0.5f, 0.5f, 0,  //V0
+							-0.5f, -0.5f, 0, //V1
+							0.5f, -0.5f, 0,  //V2
+							0.5f, 0.5f, 0,  //V3
 							};
-		//int[] indices = {0,1,3,3,1,2};
 		
-		RawModel model = loader.loadToVAO(vertices);//, indices);
+		int[] indices = {0,1,3,3,1,2};
+		
+		RawModel model = loader.loadToVAO(vertices,indices);//, indices);
 	
 		while(!Display.isCloseRequested()){
 			//game logic
