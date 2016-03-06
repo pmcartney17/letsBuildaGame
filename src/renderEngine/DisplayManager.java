@@ -37,5 +37,4 @@ public class DisplayManager {
 	public static void closeDisplay(){
 		Display.destroy();
 	}
-	
 }
