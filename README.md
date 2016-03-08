@@ -3,8 +3,9 @@
 LWJGL wiki with info on making basic engine: <br/>
 http://wiki.lwjgl.org/index.php?title=Main_Page
 
-tutorial for LWJGL 2 (thinmartix): current episode: #9 <br/>
-https://www.youtube.com/watch?v=KMWUjNE0fYI&list=PLRIWtICgwaX0u7Rf9zkZhLoLuZVfUksDP&index=9
+tutorial for LWJGL 2 (thinmartix): current episode: 10 <br/>
+https://youtu.be/YKFYtekgnP8?list=PLRIWtICgwaX0u7Rf9zkZhLoLuZVfUksDP
+at 11:36
 
 tutorial for LWJGL 3 (ElegantWhelp): <br/>
 https://www.youtube.com/watch?v=ZBWAXr9z0bI&list=PLILiqflMilIxta2xKk2EftiRHD4nQGW0u
