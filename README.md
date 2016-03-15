@@ -16,7 +16,7 @@ https://eclipse.github.io/
 <br/>1)Export as a <b> Wavefront </b> file
 <br/>2)Make sure Include Normals, Include UVs, and Triangulate Faces are all selected
 <br/>3)Make sure that "Forward:" is set to -Z Forward, and "Up:" is set to Y Up
-<br/>4)Save anywhere <b>but make sure to move it to the games res folder (gameEngine/res)<br/><br/>
+<br/>4)Save anywhere <b>but make sure to move it to the games res folder (gameEngine/res)<b/><br/><br/>
 <br/> Notice, make sure that the obj files are in the right format I.E .png or .jgp is specified in the loader
 <br/> Also make sure the image name is put into that game loop as is
 
