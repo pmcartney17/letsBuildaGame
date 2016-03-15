@@ -18,16 +18,17 @@ import org.newdawn.slick.opengl.*;
 import models.RawModel;
 
 public class Loader {
- 
+													
 	private List<Integer> vaos = new ArrayList<Integer>();
 	private List<Integer> vbos = new ArrayList<Integer>();
 	private List<Integer> textures = new ArrayList<Integer>();
  
-	public RawModel loadToVAO(float[] postions,float[] textureCoords, int[] indices){
+	public RawModel loadToVAO(float[] postions,float[] textureCoords,float[] normals, int[] indices){
 		int vaoID = createVAO();
 		bindIndicesBuffer(indices);
 		storeDataInAttribueList(0,3,postions);
 		storeDataInAttribueList(1,2,textureCoords);
+		storeDataInAttribueList(2,3,normals);
 		unbindVAO();
 		return new RawModel(vaoID,indices.length);
 	}
@@ -42,7 +43,7 @@ public class Loader {
 	public int loadTexture(String fileName){
 		Texture texture = null;
 		try {
-			texture = TextureLoader.getTexture("PNG",new FileInputStream("res/"+fileName+".jpg"));
+			texture = TextureLoader.getTexture("PNG",new FileInputStream("res/"+fileName+".png"));
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 		} catch (IOException e) {
