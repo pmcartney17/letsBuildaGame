@@ -26,12 +26,12 @@ public class MainGameLoop {
 		
 		
 		
-		RawModel model = OBJLoader.loadObjModel("House", loader);
-		ModelTexture texture = new ModelTexture(loader.loadTexture("image"));
+		RawModel model = OBJLoader.loadObjModel("dragon", loader);
+		ModelTexture texture = new ModelTexture(loader.loadTexture("white"));
 		TexturedModel staticModel = new TexturedModel(model,texture);
 		
 		Entity entity = new Entity(staticModel, new Vector3f(0,-5,-20),0,0,0,1);
-		Light light = new Light(new Vector3f(0,0,-20),new Vector3f(1,1,1));
+		Light light = new Light(new Vector3f(0,0,-10),new Vector3f(2,191,53));
 		
 		Camera camera = new Camera();
 	
