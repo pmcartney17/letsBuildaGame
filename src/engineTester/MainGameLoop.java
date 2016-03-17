@@ -30,10 +30,12 @@ public class MainGameLoop {
 		ModelTexture texture = new ModelTexture(loader.loadTexture("white"));
 		TexturedModel staticModel = new TexturedModel(model,texture);
 		
-		Entity entity = new Entity(staticModel, new Vector3f(0,-5,-20),0,0,0,1);
-		Light light = new Light(new Vector3f(0,0,-10),new Vector3f(2,191,53));
+		Entity entity = new Entity(staticModel, new Vector3f(0,-5,-20),0,0,0,1); // xyz scale
+		Light light = new Light(new Vector3f(0,0,-30),new Vector3f(1,1,1));
 		
 		Camera camera = new Camera();
+		
+		double testSine = 10.0;
 	
 		while(!Display.isCloseRequested()){
 			entity.increaseRotation(0, 0.1f, 0);
@@ -41,6 +43,14 @@ public class MainGameLoop {
 			camera.move();
 			renderer.prepare();
 			shader.start();
+			
+			
+			testSine+=0.00021;
+			double lightpos = Math.sin(testSine*100)*10-20;
+			light.setPosition(new Vector3f(0,0,(int)lightpos));
+			System.out.println(lightpos);
+			
+			
 			shader.loadLight(light);
 			shader.loadviewMatrix(camera);
 			renderer.render(entity,shader);
