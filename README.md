@@ -9,6 +9,8 @@ https://youtu.be/bcxX0R8nnDs?list=PLRIWtICgwaX0u7Rf9zkZhLoLuZVfUksDP
 tutorial for LWJGL 3 (ElegantWhelp): <br/>
 https://www.youtube.com/watch?v=ZBWAXr9z0bI&list=PLILiqflMilIxta2xKk2EftiRHD4nQGW0u
 
+Link for information for collsion math (good channel for other info too) </br>
+https://www.youtube.com/watch?v=NZHzgXFKfuY
 Link for using github and eclipse together: <br/>
 https://eclipse.github.io/
 
