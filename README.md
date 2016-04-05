@@ -24,23 +24,13 @@ https://eclipse.github.io/
 
 *There is currentley a conflict that needs to be resolved, i do have the code that works, but right now for some reason the github version you can pull has a duplicate error within the code*
 
-Under Development:
-
-- keyboard input
-- sound
-- rendering
-- inputs
-- texture loader
+I have not idea whats happened to the code guys... you cant just push broken code when people want to work on it! someone needs to fix it.
 
 Game Ideas, concepts:
 
 - 3rd person isometric (visible character)
 - dungeon based
 - simple combat
-
-mechanics:
-
-- Walking
 
 Contributors: Ian, Brett, Kadyn, Spencer
 
