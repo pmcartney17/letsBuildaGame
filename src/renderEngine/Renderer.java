@@ -49,7 +49,8 @@ public class Renderer {
 			List<Entity> batch = entities.get(model);
 			for(Entity entity:batch){
 				prepareInstance(entity);
-				GL11.glDrawElements(GL11.GL_TRIANGLES,model.getRawModel().getVertexCount(),GL11.GL_UNSIGNED_INT,0);	
+				GL11.glDrawElements(GL11.GL_TRIANGLES, model.getRawModel().getVertexCount(),
+							GL11.GL_UNSIGNED_INT,0);	
 			}
 			unbindTexturedModel();
 		}
@@ -79,7 +80,6 @@ public class Renderer {
 				entity.getRotX(), entity.getRotY(), entity.getRotZ(), entity.getScale());
 		shader.loadTransformationMatrix(transformationMatrix);
 	}
-
 	
 	private void createProjectionMatrix(){
 		float aspectRatio = (float) Display.getWidth() / (float) Display.getHeight();

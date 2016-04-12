@@ -27,33 +27,37 @@ public class MainGameLoop {
 		DisplayManager.createDisplay();
 		Loader loader = new Loader();
 
-		
-		
-		
 		RawModel model = OBJLoader.loadObjModel("dragon", loader);
-		TexturedModel staticModel = new TexturedModel(model,new ModelTexture(loader.loadTexture("white")));
-		ModelTexture texture = staticModel.getTexture();
-		texture.setShineDamper(10);
-		texture.setReflectivity(1);
+		TexturedModel staticModel = new TexturedModel(model, new ModelTexture(
+				loader.loadTexture("white")));
 		
-		Entity entity = new Entity(staticModel, new Vector3f(0,-5,-20),0,0,0,1); // xyz scale
-		Light light = new Light(new Vector3f(200,200,100),new Vector3f(1,1,1));
+		//Entity entity = new Entity(staticModel, new Vector3f(0, 0, -25), 0, 160, 0, 1);;
+		Light light = new Light(new Vector3f(250, 250, 125), new Vector3f(1, 1, 1));
 		
 		Camera camera = new Camera();
 		
 		List<Entity> allCubes = new ArrayList<Entity>();
 		Random random = new Random();
 		
+		for (int i = 0; i < 25; i++)		{
+			float x = random.nextFloat() * 100 - 50;
+			float y = random.nextFloat() * 100 - 50;
+			float z = random.nextFloat() * -300;
+			allCubes.add(new Entity(staticModel, new Vector3f (x,y,z), random.nextFloat() *180f,
+						random.nextFloat() *180f, 0f, 1f));
+			
+			
+		}
+		
 		MasterRenderer renderer = new MasterRenderer();
 		while(!Display.isCloseRequested()){
-			entity.increaseRotation(0, 0.1f, 0);
-			entity.increasePosition(0, 0, 0);
 			camera.move();
-			for (Entity cube : allCubes){
-				renderer.processEntity(cube);
-			}
-			renderer.render(light,  camera);
-			DisplayManager.updateDisplay();	
+			
+				for (Entity cube : allCubes){
+					renderer.processEntity(cube);
+				}
+				renderer.render(light,  camera);
+				DisplayManager.updateDisplay();	
 		}
 		
 		renderer.cleanUp();
