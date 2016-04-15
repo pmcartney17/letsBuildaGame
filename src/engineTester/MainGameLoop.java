@@ -31,13 +31,15 @@ public class MainGameLoop {
 		RawModel model = OBJLoader.loadObjModel("grassob", loader);
 				TexturedModel staticModel = new TexturedModel(model, new ModelTexture(
 				loader.loadTexture("grass (1)")));
+				model.getTexture().setHasTransparency(true)	;
 		
+	   
 		Entity entity = new Entity(staticModel, new Vector3f(0, 0, 5), 0, 160, 0, 50);;
 		Light light = new Light(new Vector3f(250, 250, 125), new Vector3f(1, 1, 1));
 		
 		Terrain terrain = new Terrain(0,0,loader,new ModelTexture(loader.loadTexture("grass")));
 		Terrain terrain2 = new Terrain(1,0,loader,new ModelTexture(loader.loadTexture("grass")));
-		
+			
 		Camera camera = new Camera();
 		
 		List<Entity> grass = new ArrayList<Entity>();
