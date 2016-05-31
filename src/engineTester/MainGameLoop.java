@@ -31,7 +31,9 @@ public class MainGameLoop {
 		RawModel model = OBJLoader.loadObjModel("grassob", loader);
 				TexturedModel staticModel = new TexturedModel(model, new ModelTexture(
 				loader.loadTexture("grass (1)")));
-				model.getTexture().setHasTransparency(true)	;
+				model.
+				//.getTexture().setHasTransparency(true)	;
+				//need to find where the .getTexture is and fix it
 		
 	   
 		Entity entity = new Entity(staticModel, new Vector3f(0, 0, 5), 0, 160, 0, 50);;
