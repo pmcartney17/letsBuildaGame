@@ -1,7 +1,5 @@
 package models;
 
-import textures.ModelTexture;
-
 public class RawModel {
 
 	private int vaoID;
@@ -27,7 +25,6 @@ public class RawModel {
 	public void setVertexCount(int vertexCount) {
 		this.vertexCount = vertexCount;
 	}
-
 	
 	
 	
