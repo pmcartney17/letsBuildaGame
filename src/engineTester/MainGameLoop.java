@@ -28,13 +28,17 @@ public class MainGameLoop {
 		DisplayManager.createDisplay();
 		Loader loader = new Loader();
 
-		RawModel model = OBJLoader.loadObjModel("grassob", loader);
-				TexturedModel staticModel = new TexturedModel(model, new ModelTexture(
-				loader.loadTexture("grass (1)")));
-				model.
-				//.getTexture().setHasTransparency(true)	;
-				//need to find where the .getTexture is and fix it
+		RawModel model = OBJLoader.loadObjModel("dragon", loader);
 		
+		TexturedModel staticModel = new TexturedModel(model, new ModelTexture(
+				loader.loadTexture("white")));
+		
+		TexturedModel grass = new TexturedModel(model, new ModelTexture(
+				loader.loadTexture("grass")));
+				grass.getTexture().setHasTransparency(true);
+		TexturedModel fern = new TexturedModel(OBJLoader.loadObjModel("grassob", loader),
+				new ModelTexture(loader.loadTexture("grass")));
+		fern.getTexture().setHasTransparency(true);
 	   
 		Entity entity = new Entity(staticModel, new Vector3f(0, 0, 5), 0, 160, 0, 50);;
 		Light light = new Light(new Vector3f(250, 250, 125), new Vector3f(1, 1, 1));
@@ -44,17 +48,20 @@ public class MainGameLoop {
 			
 		Camera camera = new Camera();
 		
-		List<Entity> grass = new ArrayList<Entity>();
+		List<Entity> entities = new ArrayList<Entity>();
 		Random random = new Random();
-
-
-		
-		for (int i = 0; i < 25; i++)		{
-			float x = random.nextFloat() * 100 - 50;
+		for (int i = 0; i < 25; i++)	{
+			entities.add(new Entity(staticModel, new Vector3f(random.nextFloat() * 800 - 400, 0,
+					random.nextFloat() * -600), 0, 0, 0, 3));
+			//entities.add(new Entity(dragon, new Vector3f(random.nextFloat() * 800 - 400, 0,
+			//		random.nextFloat() * -600), 0, 0, 0, 1));
+			entities.add(new Entity(fern, new Vector3f(random.nextFloat() * 800 - 400, 0,
+					random.nextFloat() * -600), 0, 0, 0, 0.6f));			
+			/*float x = random.nextFloat() * 100 - 50;
 			
 			float z = random.nextFloat() * -300;
 			grass.add(new Entity(staticModel, new Vector3f (x,0,z), random.nextFloat() *180f,
-						random.nextFloat() *10f, 1f, 0.2f));
+						random.nextFloat() *10f, 1f, 0.2f));*/
 			
 			
 		}
@@ -62,15 +69,16 @@ public class MainGameLoop {
 		
 		MasterRenderer renderer = new MasterRenderer();
 		while(!Display.isCloseRequested()){
-			entity.increaseRotation(0, 0.2f, 0);
+			entity.increaseRotation(0, 1, 0);
 			camera.move();
-				renderer.processTerrain(terrain);
-			   	renderer.processTerrain(terrain2);
+			
+			renderer.processTerrain(terrain);
+			renderer.processTerrain(terrain2);
 			 
 			
-			   	for (Entity cube : grass){
+			   	/*(Entity cube : grass){
 					renderer.processEntity(cube);
-				}
+				}*/
 			   
 			   	renderer.processEntity(entity);
 				renderer.render(light,  camera);
