@@ -40,7 +40,7 @@ public class MainGameLoop {
 				new ModelTexture(loader.loadTexture("grass")));
 		fern.getTexture().setHasTransparency(true);
 	   
-		Entity entity = new Entity(staticModel, new Vector3f(0, 0, 5), 0, 160, 0, 50);;
+		Entity entity = new Entity(staticModel, new Vector3f(0, 0, 5), 0, 0, 0, 1);
 		Light light = new Light(new Vector3f(250, 250, 125), new Vector3f(1, 1, 1));
 		
 		Terrain terrain = new Terrain(0,0,loader,new ModelTexture(loader.loadTexture("grass")));
@@ -51,12 +51,13 @@ public class MainGameLoop {
 		List<Entity> entities = new ArrayList<Entity>();
 		Random random = new Random();
 		for (int i = 0; i < 25; i++)	{
-			entities.add(new Entity(staticModel, new Vector3f(random.nextFloat() * 800 - 400, 0,
-					random.nextFloat() * -600), 0, 0, 0, 3));
+			//entities.add(new Entity(staticModel, new Vector3f(random.nextFloat() * 800 - 400, 0,
+				//	random.nextFloat() * -600), 0, 0, 0, 3));
+			System.out.println(random.nextFloat());
 			//entities.add(new Entity(dragon, new Vector3f(random.nextFloat() * 800 - 400, 0,
 			//		random.nextFloat() * -600), 0, 0, 0, 1));
 			entities.add(new Entity(fern, new Vector3f(random.nextFloat() * 800 - 400, 0,
-					random.nextFloat() * -600), 0, 0, 0, 0.6f));			
+					random.nextFloat() * -600), 0, 0, 0, 0));			
 			/*float x = random.nextFloat() * 100 - 50;
 			
 			float z = random.nextFloat() * -300;
@@ -69,7 +70,7 @@ public class MainGameLoop {
 		
 		MasterRenderer renderer = new MasterRenderer();
 		while(!Display.isCloseRequested()){
-			entity.increaseRotation(0, 1, 0);
+			entity.increaseRotation(0, 0, 0);
 			camera.move();
 			
 			renderer.processTerrain(terrain);
