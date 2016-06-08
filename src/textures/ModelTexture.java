@@ -8,8 +8,8 @@ public class ModelTexture {
 	private float reflectivity = 0;
 	
 	
-	private boolean hasTransparency = false;
-	 
+	private boolean hasTransparency = false;	
+	
 	
 	public boolean isHasTransparency() {
 		return hasTransparency;
