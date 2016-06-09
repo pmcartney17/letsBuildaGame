@@ -1,5 +1,6 @@
 package entities;
 
+import org.lwjgl.input.Keyboard;
 import org.lwjgl.util.vector.Vector3f;
 
 import models.TexturedModel;
@@ -21,6 +22,27 @@ public class Entity {
 		this.scale = scale;
 	}
 	
+	public void charmove(){
+		if(Keyboard.isKeyDown(Keyboard.KEY_W)){
+			position.z-=1.2f;
+		}
+		if(Keyboard.isKeyDown(Keyboard.KEY_D)){
+			position.x+=1.2f;
+		}
+		if(Keyboard.isKeyDown(Keyboard.KEY_A)){
+			position.x-=1.2f;
+		}
+		if(Keyboard.isKeyDown(Keyboard.KEY_S)){
+			position.z+=1.2f;
+		}
+		if(Keyboard.isKeyDown(Keyboard.KEY_E)){
+			position.y-=1.2f;
+		}
+		if(Keyboard.isKeyDown(Keyboard.KEY_Q)){
+			position.y+=1.2f;
+		}
+		
+	}
 	public void increasePosition(float dx, float dy, float dz){
 		this.position.x+=dx;
 		this.position.y+=dy;
