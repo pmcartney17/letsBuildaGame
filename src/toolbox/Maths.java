@@ -29,5 +29,16 @@ public class Maths {
 		Matrix4f.translate(negativeCameraPos, viewMatrix, viewMatrix);
 		return viewMatrix;
 	}
-	
+	public static float sign(float num)
+	{
+		if (num > 0){
+			return 1;
+		}
+		else if (num < 0){
+		return -1;	
+		}
+		else{
+			return 0;
+		}
+	}
 }

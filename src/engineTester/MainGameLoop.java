@@ -20,6 +20,7 @@ import renderEngine.EntityRenderer;
 import shaders.StaticShader;
 import terrains.Terrain;
 import textures.ModelTexture;
+import toolbox.Maths;
 
 public class MainGameLoop {
 
@@ -50,21 +51,25 @@ public class MainGameLoop {
 			entities.add(new Entity(staticModel, new Vector3f(0,2,0),0,0,0,1));
 			 
 		}
+
+		Vector3f vPos = new Vector3f((random.nextFloat()-.5f)*800,0,(random.nextFloat()-.5f)*800);
+		System.out.println(vPos);
 	
 		MasterRenderer renderer = new MasterRenderer();
 		
 		while(!Display.isCloseRequested()){
-			for(Entity d:entities)
-			{
-				
-				
+			/*for(Entity d:entities)
+			{	
 				renderer.processEntity(d);
-				
 			}
+			*/
+			entity.increasePosition(Maths.sign(vPos.x- entity.getPosition().x)/2, 0, 0);
+			entity.increasePosition(0, 0, Maths.sign(vPos.y+ entity.getPosition().y)/2);
 			
-			//camera.move();
+			System.out.println(entity.getPosition());
+			camera.move();
 			renderer.processTerrain(terrain);
-			entity.charmove();
+			
 			renderer.processEntity(entity);
 			renderer.render(light,  camera);
 			DisplayManager.updateDisplay();	
