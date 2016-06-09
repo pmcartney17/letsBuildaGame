@@ -36,7 +36,7 @@ public class MainGameLoop {
 		TexturedModel grass = new TexturedModel(OBJLoader.loadObjModel("grassob", loader),new ModelTexture(loader.loadTexture("grass")));
 		grass.getTexture().setHasTransparency(true);
 	   
-		Entity entity = new Entity(staticModel, new Vector3f(0, 0, 5), 0, 0, 0, 1);
+		Entity entity = new Entity(staticModel, new Vector3f(0, 0, 0), 0, 0, 0, 1);
 		Light light = new Light(new Vector3f(250, 250, 125), new Vector3f(1, 1, 1));
 		
 		Terrain terrain = new Terrain(0,0,loader,new ModelTexture(loader.loadTexture("grass")));
@@ -58,20 +58,22 @@ public class MainGameLoop {
 		MasterRenderer renderer = new MasterRenderer();
 		
 		while(!Display.isCloseRequested()){
-			/*for(Entity d:entities)
+			for(Entity d:entities)
 			{	
+				d.setPosition(vPos);
 				renderer.processEntity(d);
 			}
-			*/
+			
 			
 
 			if(Maths.sign(vPos.x- entity.getPosition().x) == 0 && Maths.sign(vPos.y+ entity.getPosition().y) == 0){
 				vPos = new Vector3f((random.nextFloat()-.5f)*800,0,(random.nextFloat()-.5f)*800);
-				System.out.println("changed" + vPos);
+				
+				System.out.println("changed " + vPos);
 			}
 			entity.increasePosition(Maths.sign(vPos.x- entity.getPosition().x)/2, 0, 0);
 			entity.increasePosition(0, 0, Maths.sign(vPos.y+ entity.getPosition().y)/2);
-			 
+		
 			System.out.println(entity.getPosition());
 			camera.move();
 			renderer.processTerrain(terrain);
