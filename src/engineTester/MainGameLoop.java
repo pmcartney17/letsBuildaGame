@@ -63,9 +63,15 @@ public class MainGameLoop {
 				renderer.processEntity(d);
 			}
 			*/
+			
+
+			if(Maths.sign(vPos.x- entity.getPosition().x) == 0 && Maths.sign(vPos.y+ entity.getPosition().y) == 0){
+				vPos = new Vector3f((random.nextFloat()-.5f)*800,0,(random.nextFloat()-.5f)*800);
+				System.out.println("changed" + vPos);
+			}
 			entity.increasePosition(Maths.sign(vPos.x- entity.getPosition().x)/2, 0, 0);
 			entity.increasePosition(0, 0, Maths.sign(vPos.y+ entity.getPosition().y)/2);
-			
+			 
 			System.out.println(entity.getPosition());
 			camera.move();
 			renderer.processTerrain(terrain);
@@ -73,7 +79,9 @@ public class MainGameLoop {
 			renderer.processEntity(entity);
 			renderer.render(light,  camera);
 			DisplayManager.updateDisplay();	
-		}
+
+			}
+			
 		
 		renderer.cleanUp();
 		loader.cleanUp();

@@ -31,10 +31,10 @@ public class Maths {
 	}
 	public static float sign(float num)
 	{
-		if (num > 0){
+		if (num > 1){
 			return 1;
 		}
-		else if (num < 0){
+		else if (num < -1){
 		return -1;	
 		}
 		else{
