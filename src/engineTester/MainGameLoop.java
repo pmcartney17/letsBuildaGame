@@ -48,12 +48,13 @@ public class MainGameLoop {
 		Random random = new Random();
 		
 		for (int i = 0; i < 1; i++)	{
-			entities.add(new Entity(staticModel, new Vector3f(0,2,0),0,0,0,1));
+			entities.add(new Entity(staticModel, new Vector3f(0,0,0),0,0,0,1));
 			 
 		}
 
 		Vector3f vPos = new Vector3f((random.nextFloat()-.5f)*800,0,(random.nextFloat()-.5f)*800);
 		System.out.println(vPos);
+		
 	
 		MasterRenderer renderer = new MasterRenderer();
 		
@@ -66,15 +67,15 @@ public class MainGameLoop {
 			
 			
 
-			if(Maths.sign(vPos.x- entity.getPosition().x) == 0 && Maths.sign(vPos.y+ entity.getPosition().y) == 0){
+			if(Maths.sign(vPos.x- entity.getPosition().x) == 0 && Maths.sign(vPos.z- entity.getPosition().z) == 0){
 				vPos = new Vector3f((random.nextFloat()-.5f)*800,0,(random.nextFloat()-.5f)*800);
 				
 				System.out.println("changed " + vPos);
 			}
 			entity.increasePosition(Maths.sign(vPos.x- entity.getPosition().x)/2, 0, 0);
-			entity.increasePosition(0, 0, Maths.sign(vPos.y+ entity.getPosition().y)/2);
-		
+			entity.increasePosition(0, 0, Maths.sign(vPos.z- entity.getPosition().z)/2);
 			System.out.println(entity.getPosition());
+			
 			camera.move();
 			renderer.processTerrain(terrain);
 			
